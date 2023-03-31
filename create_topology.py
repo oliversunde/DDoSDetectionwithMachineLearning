@@ -18,7 +18,7 @@ def visualize_topology(net, output_file='topology.png'):
     graph.write_png(output_file)
 
 def create_topology():
-    net = Mininet(controller=Controller, switch=OVSSwitch)
+    net = Mininet(controller=RemoteController, switch=OVSSwitch)
 
     info('*** Adding controller\n')
     net.addController('c0', controller=RemoteController, ip='127.0.0.1', port
