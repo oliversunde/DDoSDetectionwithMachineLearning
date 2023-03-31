@@ -2,6 +2,18 @@ from mininet.net import Mininet
 from mininet.node import Controller, OVSSwitch
 from mininet.cli import CLI
 from mininet.log import setLogLevel, info
+import pydot
+
+def visualize_topology(net, output_file='topology.png'):
+    graph = pydot.Dot(graph_type='graph', rankdir='LR')
+
+    for node in net.values():
+        graph.add_node(pydot.Node(node.name, label=node.name, shape='circle'))
+
+    for node1, node2 in net.links(sort=True):
+        graph.add_edge(pydot.Edge(node1.name, node2.name))
+
+    graph.write_png(output_file)
 
 def create_topology():
     net = Mininet(controller=Controller, switch=OVSSwitch)
@@ -36,6 +48,9 @@ def create_topology():
 
     info('*** Starting network\n')
     net.start()
+
+    # Visualize the topology
+    visualize_topology(net)
 
     info('*** Running CLI\n')
     CLI(net)
