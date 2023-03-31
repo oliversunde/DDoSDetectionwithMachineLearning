@@ -40,3 +40,5 @@ if __name__ == '__main__':
     output_file = sys.argv[2]
 
     preprocess_pcap(input_folder, output_file)
+#remember to run it
+#python preprocess_data.py <input_folder> <output_file>
