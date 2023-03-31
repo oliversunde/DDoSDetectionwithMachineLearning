@@ -1,5 +1,7 @@
+
 from mininet.net import Mininet
-from mininet.node import Controller, OVSSwitch
+from mininet.node import Controller, OVSSwitch, RemoteController
+
 from mininet.cli import CLI
 from mininet.log import setLogLevel, info
 import pydot
@@ -19,7 +21,7 @@ def create_topology():
     net = Mininet(controller=Controller, switch=OVSSwitch)
 
     info('*** Adding controller\n')
-    net.addController('c0')
+    net.addController('c0', controller=RemoteController, ip='127.0.0.1', port
 
     info('*** Adding hosts\n')
     hosts = []
