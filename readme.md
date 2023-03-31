@@ -9,5 +9,6 @@ sudo apt-get install tcpdump
 
 pip install scapy pandas
 
+pip install matplotlib
 
 Remember to run all the scripts.
