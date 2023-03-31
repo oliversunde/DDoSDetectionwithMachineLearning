@@ -14,3 +14,5 @@ done
 
 #remember to give it exec rights
 #chmod +x start_tcpdump.sh
+#and then start it with, edit output folder in the script and when running the shell
+#./start_tcpdump.sh <output_folder>
