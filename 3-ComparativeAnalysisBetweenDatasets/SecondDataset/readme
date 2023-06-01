@@ -1,1 +1,8 @@
 
+CLI1>ryu-manager custom_ryu_controller.py --config-file ryu-conf.conf
+CLI2>sudo python3 custom_topology.py --remote-controller
+Mininet>pingall
+Mininet>h13 hping3 -2 -V -d 120 -w 64 --rand-source --flood h15
+
+CLI1>ryu-manager custom_ryu_controller.py --config-file ryu-conf.conf
+CLI2>sudo python3 traffic_gen_norm_ddos.py --remote-controller
