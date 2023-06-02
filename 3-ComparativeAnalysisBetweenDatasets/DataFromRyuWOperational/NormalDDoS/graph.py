@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Read the CSV file skipping the first two rows
-data = pd.read_csv('preprocessed_data.csv')
+data = pd.read_csv('captured_network_data4.csv')
 
 # Extract the required columns
 frame_time_delta = data['frame_time_delta']
@@ -32,10 +32,9 @@ for delta in frame_time_delta:
 # Plotting the graph
 plt.plot(x_coordinates, probabilities_1, label='Probability: Normal Traffic')
 plt.plot(x_coordinates, probabilities_2, label='Probability: DDoS')
-#plt.plot(x_coordinates, packet_arrival_rate, label='Packet Arrival Rate', color='red')
 plt.xlabel(f'Time ({time_unit})')
 plt.ylabel('Probability')
-plt.title('Second Dataset\n Random Forest 11 Features\n Normal -2xDDoS Burst - Normal - DDoS')
+plt.title('Second Dataset\n Random Forest 11 Features\n Normal-DDoS')
 plt.legend()
 plt.grid(True)
 plt.show()

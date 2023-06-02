@@ -33,7 +33,7 @@ unique_connections = set()
 unique_packets_per_second = 0
 with open('flag.txt', 'r') as f:
     flag = f.read().strip() == 'True'
-
+    print("FLAG", flag)
 
 class DummyModel:
     def predict(self, X):
@@ -259,7 +259,7 @@ class CustomRyuController(app_manager.RyuApp):
         elapsed_time = current_time - self.start_time
         if len(self.buffer) >= self.buffer_limit:  # or elapsed_time
             threading.Thread(target=self.write_to_csv, args=(
-                self.buffer, 'captured_network_data.csv')).start()
+                self.buffer, 'captured_network_data1337.csv')).start()
             self.buffer = []  # clear the buffer after writing to file
         # self.profiler.disable()
         # self.profiler.print_stats()
