@@ -1,2 +1,3 @@
 #Models from 5-PerformanceMetricCalculations
 #See subfolders
+#Threshold 0.8 meaning a probability above 80% would block packets. This could be tweaked.
