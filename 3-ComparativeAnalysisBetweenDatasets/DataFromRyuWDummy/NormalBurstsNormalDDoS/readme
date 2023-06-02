@@ -1,1 +1,4 @@
-
+CLI1>ryu-manager custom_ryu_controller.py --config-file ryu-config.conf
+CLI2>sudo python3 processor.py
+CLI3>sudo python3 traffic_gen_norm_ddos.py --remote-controller
+CLI>sudo python3 begge.py
