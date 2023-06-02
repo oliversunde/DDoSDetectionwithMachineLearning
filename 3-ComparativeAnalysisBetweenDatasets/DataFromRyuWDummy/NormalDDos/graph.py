@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Read the CSV file skipping the first two rows
-data = pd.read_csv('captured_network_data.csv')
+data = pd.read_csv('captured_network_dataNormDDoS.csv')
 
 # Extract the required columns
 frame_time_delta = data['frame_time_delta']
