@@ -27,4 +27,8 @@ CLI>sudo mn -c
 
 #RAW.csv - 102001 packets
 
-
+#Data:
+#2-10001 netGen.py
+#10002-18001 ddos, 4000 icmp, 2000 udp, 2000 icmp
+#18002-28001 netGen.py
+#28002-102001 ddos
