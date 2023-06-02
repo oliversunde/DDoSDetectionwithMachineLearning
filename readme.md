@@ -1,15 +1,54 @@
-vol 1.0
+These tests where run on with the following specs:
+Dell Precision 3530 - Ubuntu 18.04.06 LTS 
+Oracle VM VirtualBox g.1.0 r135406 (Qt5.9.5):
+  MininetVM: Ubuntu 18.04.05 LTS
+    Mininet: 2.3.0
+    Ryu: 4.34
+  
+  Base Memory: 16384 MB
+  Processors: 4
+  Boot Order: Floppy, Optical, Hard Disk
+  Acceleration: VT-x/AMD-V, Nested Paging, PAE/NX, KVM Paravirtualization
+  Storage: 256 GB
+  Video Memory: 16 MB
 
-**Requirements:**
+How to install most requirements:
 pip install ryu #SDN controller
-
 pip install pydot graphviz #For visualization of the Mininet Topology
-
 sudo apt-get install tcpdump
-
 pip install scapy pandas
-
 pip install matplotlib
 pip install joblib
 
-Remember to run all the scripts.
+
+TESTS:
+Tests are in order, commands are in readme within each subfolder. 
+label_preprocess_create_model.py, custom_ryu_controller.py, graph.py, begge.py, is tweaked to fit scenario.
+
+label_preprocess_create_model.py is changed to use different features, calculate different metrics(hyperparameter, feature ranking, performance metrics).
+custom_ryu_controller.py is changed to use different features, models and to include/exclude mitigation. functionality/calculations stay the same, to have a continous/matchin setup creating as few error sources as possible.
+
+
+traffic_gen_norm_ddos.py, netGen.py, custom_topology.py, processor.py, ryu-config.conf stays the same throughout.
+
+
+1-DataGeneration
+  First Round Data Generation: Capturing Data from a Custom Ryu Controller with a Dummy ML model running several scripts/commands.
+    Labeling, Preprocessing and Generating a RF ML Model based on the data above.
+  Second Round Data Generation: Capturing data from a Custom Ryu Controller with an Operational^ ML model running the same scripts/commands as above
+2 - HyperParameterTuning the First dataset(First Round)
+3 - Comparative Analysis Between Datasets
+  Running two different setups for the two Datasets(4 Results)
+4 - Feature Ranking Dataset 1(First Round Dataset)
+5 - Performance Metric Calculations(First Round Dataset)
+  RF 11
+  RF Top 6
+  RF Top 5
+  RF Top 4
+  RF Selected 4
+  SVM Selected 4
+  GVM Selected 4
+6 - Selected Features (First Round Dataset)
+  Running one setup for three ML Models(RF, SVM, GVM) with 4 Selected Features
+7 - DDoS Impact On Flows(First Round Dataset) - GBM
+8 - Mitigation with RF SVM And GBM with 4 Selected Features (First Round Dataset)
