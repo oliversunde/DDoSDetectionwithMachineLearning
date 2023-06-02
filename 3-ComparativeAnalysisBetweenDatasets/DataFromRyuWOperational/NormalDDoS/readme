@@ -3,4 +3,4 @@ CLI2>sudo python3 custom_topology.py --remote-controller
 mininet>h1 ping h2
 mininet>h13 hping3 -2 -V -d 120 -w 64 --rand-source --flood h15
 
-sudo python3 graph.py
+CLI>sudo python3 graph.py
