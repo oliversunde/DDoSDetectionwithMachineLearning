@@ -1,1 +1,2 @@
+#The following code for feature ranking and feature ranking visualization
 sudo python3 feature_ranking.py
