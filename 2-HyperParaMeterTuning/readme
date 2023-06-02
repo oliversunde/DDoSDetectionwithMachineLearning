@@ -1,3 +1,5 @@
 CLI1>sudo python3 1label_preprocess_create_model.py
-Changed the script above to add the resulted parameters
+#Changed the script above to add the resulted parameters
 CLI1>sudo python3 2label_preprocess_create_model.py
+
+#Saves random_forest_model.py
