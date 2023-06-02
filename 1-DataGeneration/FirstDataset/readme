@@ -17,7 +17,7 @@ CLI2> sudo python3 netGen.py --remote-controller
 mininet>exit
 CLI>sudo mn -c
 
-#A round of DDoS:
+#DDoS, ICMP, TCP-SYN, UDP, TCP, ICMP, UDP:
 #mininet>h6 hping3 -1 -V -d 120 -w 64 -p 80 --rand-source --flood h8
 #mininet>h5 hping3 -S -V -d 120 -w 64 -p 80 --rand-source --flood h6
 #mininet>h13 hping3 -2 -V -d 120 -w 64 --rand-source --flood h15 
