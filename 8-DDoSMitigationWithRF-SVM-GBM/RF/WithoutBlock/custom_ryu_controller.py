@@ -68,7 +68,7 @@ class CustomRyuController(app_manager.RyuApp):
         self.start_time = time.time()
         self.profiler = cProfile.Profile()
         if not flag:
-            with open('gbc_model.pkl', 'rb') as f:
+            with open('random_forest_model.pkl', 'rb') as f:
                 self.model = pickle.load(f)
         else:
             self.model = DummyModel()
