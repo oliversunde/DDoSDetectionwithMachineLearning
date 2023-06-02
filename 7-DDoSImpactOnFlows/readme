@@ -6,3 +6,6 @@ mininet> h12 hping3 -1 -V -d 120 -w 64 -p 80 --rand-source --flood h13
 h3# ping 10.0.0.4
 h9# ping 10.0.0.13
 h10# ping 10.0.0.11
+
+CLI>sudo python3 graph.py
+Data captured and copied from h1,h3,h9,h10
