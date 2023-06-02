@@ -172,7 +172,4 @@ def label_data(input_file, output_file):
     data.to_csv(output_file, index=False)
 
 if __name__ == '__main__':
-    #preprocess_data('baada.csv', 'baada_preprocessed.csv')
-    #label_data('RAW.csv', 'labeled_RAW_data.csv')
-    #preprocess_data('labeled_RAW_data.csv','preprocessed_data.csv')
     train_rf_classifier('preprocessed_data.csv', 'random_forest_model.pkl')
