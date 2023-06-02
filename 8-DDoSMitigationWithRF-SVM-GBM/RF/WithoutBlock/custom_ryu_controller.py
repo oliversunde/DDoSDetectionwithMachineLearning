@@ -399,20 +399,9 @@ class CustomRyuController(app_manager.RyuApp):
         confidence_threshold = 0.8  # endre litt kanskje
         prediction = 1 if probabilities[0][1] >= confidence_threshold else 0
         if not flag:
-            if prediction == 1:  # DDoS traffic detected
-                self.shut_down_port(datapath, in_port)  # Call the method here
-                # assuming you've parsed the IP packet into pkt_ipv4
-                if pkt_ipv4 is not None and pkt_ethernet is not None:
-                    source_ip = pkt_ipv4.src
-                    source_mac = pkt_ethernet.src
-                    self.ip_to_mac[source_ip] = source_mac
-                    self.trace_back(source_ip, source_mac)
-                    if source_mac in self.malicious_macs:
-                        print("block malicious host")
-                        self.block_malicious_host(src)
-
-                #out_port = self.mac_to_port[dpid].get(dst, ofproto.OFPP_FLOOD)
-                #actions = [parser.OFPActionOutput(out_port)]
+            if prediction == 1:  # DDoS traffic detected  
+                out_port = self.mac_to_port[dpid].get(dst, ofproto.OFPP_FLOOD)
+                actions = [parser.OFPActionOutput(out_port)]
             else:
                 out_port = self.mac_to_port[dpid].get(dst, ofproto.OFPP_FLOOD)
                 actions = [parser.OFPActionOutput(out_port)]
