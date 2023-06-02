@@ -77,7 +77,7 @@ def train_rf_classifier(input_file, output_file):
         X, y, test_size=0.3, random_state=42)
     # Train a random forest classifier
     #clf = RandomForestClassifier() #First time around, the line below second time around
-    clf = RandomForestClassifier(n_estimators=500, min_samples_split = 5, min_samples_leaf=1, max_depth=20, random_state=42)
+    clf = RandomForestClassifier(n_estimators=600, min_samples_split = 15, min_samples_leaf=1, max_depth=25, random_state=42)
 
     # Define the parameter grid
     # Initialize Randomized Search
