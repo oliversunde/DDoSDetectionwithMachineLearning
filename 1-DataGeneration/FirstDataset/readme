@@ -28,3 +28,10 @@ CLI>sudo mn -c
 #RAW.csv - 102001 packets
 
 
+
+
+#Data:
+#2-10001 Regular
+#10002-18001 DDoS - 6000 icmp - 2000 udp
+#18002-28001 -Regular
+#28002-102001 er ddos
