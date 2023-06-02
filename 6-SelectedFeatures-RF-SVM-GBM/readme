@@ -1,2 +1,7 @@
 #ML Models produced in 5-PerformanceMetricsCalculations/
-#Subfolders have code for the these three tests
+
+#Following code in each subfolder
+#CLI1> ryu-manager custom_ryu_controller.py --config-file ryu-config.conf
+#CLI2> sudo python3 traffic_gen_norm_ddos.py --remote-controller
+#CLI>sudo python3 graph.py
+
