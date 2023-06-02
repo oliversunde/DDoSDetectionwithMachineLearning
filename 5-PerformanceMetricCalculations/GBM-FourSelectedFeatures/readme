@@ -1,2 +1,2 @@
-sudo python3 2label_preprocess_create.py
+sudo python3 2label_preprocess_create_model.py
 
