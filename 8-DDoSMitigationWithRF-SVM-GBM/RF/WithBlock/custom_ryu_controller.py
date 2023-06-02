@@ -68,7 +68,7 @@ class CustomRyuController(app_manager.RyuApp):
         self.start_time = time.time()
         self.profiler = cProfile.Profile()
         if not flag:
-            with open('svm_model.pkl', 'rb') as f:
+            with open('random_forest_model.pkl', 'rb') as f:
                 self.model = pickle.load(f)
         else:
             self.model = DummyModel()
@@ -411,8 +411,8 @@ class CustomRyuController(app_manager.RyuApp):
                     if source_mac in self.malicious_macs:
                         print("block malicious host")
                         self.block_malicious_host(src)
-                out_port = self.mac_to_port[dpid].get(dst, ofproto.OFPP_FLOOD)
-                actions = [parser.OFPActionOutput(out_port)]
+                #out_port = self.mac_to_port[dpid].get(dst, ofproto.OFPP_FLOOD)
+                #actions = [parser.OFPActionOutput(out_port)]
             else:
                 out_port = self.mac_to_port[dpid].get(dst, ofproto.OFPP_FLOOD)
                 actions = [parser.OFPActionOutput(out_port)]
