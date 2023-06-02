@@ -1,6 +1,8 @@
 #A round of normal network traffic:
 CLI1> ryu-manager custom_ryu_controller.py --config-file ryu_config.conf
 CLI2> sudo python3 netGen.py --remote-controller
+mininet>exit
+CLI>sudo mn -c
 
 #A round of 2 small bursts ICMP/UDP Flood:
 CLI1> ryu-manager custom_ryu_controller.py --config-file ryu_config.conf
@@ -12,6 +14,8 @@ CLI>sudo mn -c
 #A round of normal network traffic:
 CLI1> ryu-manager custom_ryu_controller.py --config-file ryu_config.conf
 CLI2> sudo python3 netGen.py --remote-controller
+mininet>exit
+CLI>sudo mn -c
 
 #A round of DDoS:
 #mininet>h6 hping3 -1 -V -d 120 -w 64 -p 80 --rand-source --flood h8
@@ -22,4 +26,5 @@ CLI2> sudo python3 netGen.py --remote-controller
 #mininet>h13 hping3 -2 -V -d 120 -w 64 --rand-source --flood h15 
 
 #RAW.csv - 102001 packets
+
 
