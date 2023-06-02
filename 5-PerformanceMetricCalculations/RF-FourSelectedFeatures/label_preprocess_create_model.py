@@ -62,7 +62,7 @@ def train_rf_classifier(input_file, output_file):
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.3, random_state=42)
     # Train a random forest classifier
-    clf = RandomForestClassifier()
+    clf = RandomForestClassifier(n_estimators=600, min_samples_split = 15, min_samples_leaf=1, max_depth=25, random_state=42)
     clf.fit(X_train, y_train)
 
     # Evaluate the classifier on the test set
