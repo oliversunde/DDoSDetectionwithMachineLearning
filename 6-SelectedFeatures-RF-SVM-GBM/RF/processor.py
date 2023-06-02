@@ -29,7 +29,7 @@ def get_process_cpu_memory(pid):
     return cpu_percentage, memory_usage
 
 
-file_path = "cpu_memory_log1337.txt"
+file_path = "cpu_memory_log.txt"
 
 # Specify the process names you want to monitor
 process_name_ryu = "ryu-manager"
