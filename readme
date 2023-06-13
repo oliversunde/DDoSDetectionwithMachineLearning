@@ -1,4 +1,4 @@
-These tests where run on with the following specs:
+These tests where run with the following specs:
 Dell Precision 3530 - Ubuntu 18.04.06 LTS 
 Oracle VM VirtualBox g.1.0 r135406 (Qt5.9.5):
   MininetVM: Ubuntu 18.04.05 LTS
