@@ -1,1 +1,2 @@
+#Copy the captured files from each folder into this folder, or edit packet_arrival_rate.py with correct paths to each subfolder
 sudo python3 packet_arrival_rate.py
