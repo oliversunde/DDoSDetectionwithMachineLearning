@@ -21,7 +21,7 @@ def create_topology():
     net = Mininet(controller=RemoteController, switch=OVSSwitch)
 
     info('*** Adding controller\n')
-    net.addController('c0', controller=RemoteController, ip='127.0.0.1', port
+    net.addController('c0', controller=RemoteController, ip='127.0.0.1', port=6633 )
 
     info('*** Adding hosts\n')
     hosts = []
